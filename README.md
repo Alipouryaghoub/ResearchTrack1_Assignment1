@@ -115,4 +115,8 @@ for m in markers:
 
 ### Parameter definition ###
 
-According to the goal of the robot, in this program, two parameters must be defined as thresholds. Parameter a is considered as angle and parameter d as distance threshold. The purpose of defining this parameter is for the robot to know when and at what angle it is close to the target so that it can grab it.
+According to the goal of the robot, in this program, two parameters must be defined as thresholds. Parameter a_th is considered as orientation and parameter d_th as distance threshold. The purpose of defining this parameter is for the robot to know when and at what angle it is close to the target so that it can grab it.
+```
+a_th = 2.0
+d_th = 0.4
+```
