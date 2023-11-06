@@ -144,6 +144,7 @@ def drive(speed, seconds):
 ```
 
 ### Turn ###
+
 This function defines the rotation of the robot, which allows the robot to rotate around itself.When we give this function the right value, the rotation is defined in the specified time.ike the previous function, this function has two parameters (speed, seconds) which means will rotate with the amount of speed and time.
 
 ```python
@@ -160,3 +161,21 @@ def turn(speed, seconds):
     R.motors[0].m0.power = 0
     R.motors[0].m1.power = 0
 ```
+
+### find_token_gold() ###
+
+The purpose of this function definition is to actually find the closest golden token. In this program, we presentation the distance with the variable (Distance) and the rotation angle with the variable (Rotation).In this function, we consider the range of the robot's vision to be 100 and define it in the program in such a way that if the distance of the golden token is less than 100, then the robot will find the closest token and if there is no token within 100 distance, Run this program again.
+
+```python
+  Distance = 100
+    for a in R.see():
+        if a.dist < Distance and a.info.marker_type == MARKER_TOKEN_GOLD:
+            Distance = a.dist
+            Rotation = a.rot_y
+    if Distance == 100:
+        return -1, -1
+    else:
+        return Distance, Rotation
+```
+
+### main ###
