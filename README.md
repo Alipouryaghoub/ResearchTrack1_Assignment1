@@ -4,10 +4,10 @@ In this report, according to the goal requested in the assignment, it is that th
 This is the first position of the robot relative of the gold tokens in simulator.
 
 ![](/sr/robot1.png)
-```python
-R.motors[0].m0.power = 25
-R.motors[0].m1.power = -25
-```
+
+This is the second position of the robot relative of the gold tokens in simulator.
+
+![](/sr/robot2.png)
 
 Python Robotics Simulator
 ================================
