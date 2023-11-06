@@ -1,5 +1,5 @@
-In this report we doing ,,,
-
+### First_Assignment of Research_Track1
+In this report, according to the goal requested in the assignment, it is that the robot must pick up the golden tokens that are in the desired position and place them in a certain environment, which in this program, we use the middle position of the screen as the goal. We consider the final to collect tokens.as you can see in the picture below, the first figure show the initial position of the robot and tokens, and the second figure shows the final position. 
 ![](/sr/token.png)
 ```python
 R.motors[0].m0.power = 25
