@@ -123,3 +123,22 @@ a_th = 2.0
 d_th = 0.4
 """ float: Threshold for the control of the linear distance"""
 ```
+
+### Drive ###
+
+The drive function is a function to define the movement of the robot, which allows the robot to move directly forward or backward.This function takes two parameters (speed, seconds). We can give the robot the desired speed per second. So we write as follows:
+
+```python
+def drive(speed, seconds):
+    """
+    Function for setting a linear velocity
+
+    Args: speed (int): the speed of the wheels
+          seconds (int): the time interval
+    """
+    R.motors[0].m0.power = speed
+    R.motors[0].m1.power = speed
+    time.sleep(seconds)
+    R.motors[0].m0.power = 0
+    R.motors[0].m1.power = 0
+```
