@@ -113,8 +113,6 @@ for m in markers:
         print " - Arena marker {0} is {1} metres away".format( m.info.offset, m.dist )
 ```
 
-### Drive ###
+### Parameter definition ###
 
-function drive() helps the robot move forward.
-
-[sr-api]: https://studentrobotics.org/docs/programming/sr/
+According to the goal of the robot, in this program, two parameters must be defined as thresholds. Parameter a is considered as angle and parameter d as distance threshold. The purpose of defining this parameter is for the robot to know when and at what angle it is close to the target so that it can grab it.
