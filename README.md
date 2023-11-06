@@ -192,3 +192,23 @@ while Index:
       turn(5,0.5)
       Distance, Rotation = find_token_gold()
 ```
+
+First of all we need to consider several modes in the code:
+The first case is to grab the token if the golden token distance was less than the defined distance threshold. The second case is that if the robot orientation was between (-2) and (+2), which means that the orientation between these two numbers was the threshold, it would move towards the golden token.the third mode is that if the robot is not at the right angle from the golden token, it will turn a little to the left and right.
+
+```python
+    if Distance < d_th:
+      print("Found it!")
+      R.grab()  # if we are close to the token, we grab it.
+      print("Gotcha!")
+      Index = 0
+  elif -a_th <= Rotation <= a_th:  # if the robot is well aligned with the token, we go forward
+      print("Ah, here we are!.")
+      drive(10, 0.8)
+  elif Rotation < -a_th:  # if the robot is not well aligned with the token, we move it on the left or on the right
+      print("Left a bit...")
+      turn(-2, 0.5)
+  elif Rotation > a_th:
+      print("Right a bit...")
+      turn(+2, 0.5)
+```
