@@ -1,4 +1,4 @@
-In this report we doing ,,,,
+In this report we doing ,,,
 
 ![](/sr/token.png)
 
