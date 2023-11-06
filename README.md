@@ -126,7 +126,7 @@ d_th = 0.4
 
 ### Drive ###
 
-The drive function is a function to define the movement of the robot, which allows the robot to move directly forward or backward.This function takes two parameters (speed, seconds). We can give the robot the desired speed per second. So we write as follows:
+The drive function is a function to define the movement of the robot, which allows the robot to move directly forward or backward.This function takes two parameters (speed, seconds). We can give the robot the desired linear velocity per second. So we write as follows:
 
 ```python
 def drive(speed, seconds):
