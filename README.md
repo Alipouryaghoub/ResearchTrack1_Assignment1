@@ -195,6 +195,7 @@ while Index:
 
 First of all we need to consider several modes in the code:
 The first case is to grab the token if the golden token distance was less than the defined distance threshold. The second case is that if the robot orientation was between (-2) and (+2), which means that the orientation between these two numbers was the threshold, it would move towards the golden token.the third mode is that if the robot is not at the right angle from the golden token, it will turn a little to the left and right.
+The command`R.grab()` , when the robot gets close to the golden token, grab the token
 
 ```python
     if Distance < d_th:
@@ -212,3 +213,4 @@ The first case is to grab the token if the golden token distance was less than t
       print("Right a bit...")
       turn(+2, 0.5)
 ```
+
