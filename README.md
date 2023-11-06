@@ -124,7 +124,7 @@ d_th = 0.4
 """ float: Threshold for the control of the linear distance"""
 ```
 
-### Drive ###
+### drive() ###
 
 The drive function is a function to define the movement of the robot, which allows the robot to move directly forward or backward.This function takes two parameters (speed, seconds). We can give the robot the desired linear velocity per second. So we write as follows:
 
@@ -143,7 +143,7 @@ def drive(speed, seconds):
     R.motors[0].m1.power = 0
 ```
 
-### Turn ###
+### turn() ###
 
 This function defines the rotation of the robot, which allows the robot to rotate around itself.When we give this function the right value, the rotation is defined in the specified time.ike the previous function, this function has two parameters (speed, seconds) which means will rotate with the amount of speed and time.
 
@@ -195,7 +195,8 @@ while Index:
 
 First of all we need to consider several modes in the code:
 The first case is to grab the token if the golden token distance was less than the defined distance threshold. The second case is that if the robot orientation was between (-2) and (+2), which means that the orientation between these two numbers was the threshold, it would move towards the golden token.the third mode is that if the robot is not at the right angle from the golden token, it will turn a little to the left and right.
-The command`R.grab()` , when the robot gets close to the golden token, grab the token
+The command`R.grab()` , when the robot gets close to the golden token, grab the token.
+The command`R.release()` ,when the robot grap it the tokens in the right position, then release it.
 
 ```python
     if Distance < d_th:
@@ -212,5 +213,11 @@ The command`R.grab()` , when the robot gets close to the golden token, grab the 
   elif Rotation > a_th:
       print("Right a bit...")
       turn(+2, 0.5)
+turn(-8,1.5)
+drive(30,6)
+R.release()
+drive(-20,1.5)
+turn(-10,4)
+drive(20,2) 
 ```
 
