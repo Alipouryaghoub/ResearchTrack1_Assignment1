@@ -1,6 +1,10 @@
 In this report we doing ,,,
 
 ![](/sr/token.png)
+```python
+R.motors[0].m0.power = 25
+R.motors[0].m1.power = -25
+```
 
 Python Robotics Simulator
 ================================
