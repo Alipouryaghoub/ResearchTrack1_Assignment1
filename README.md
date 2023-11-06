@@ -179,3 +179,16 @@ The purpose of this function definition is to actually find the closest golden t
 ```
 
 ### main ###
+
+In this part, we have to describe the main code of the program according to the definition of functions. We have to write using the command (while) that the robot will put all the golden tokens in the middle position, in a certain place. As mentioned in the previous function, the bot should find the closest token.So, we should write the program in such a way that if the token is not present in the desired distance, then it rotates a little and finds the golden token again according to the defined function.
+
+```python
+  Index = 1
+
+while Index:       
+  Distance, Rotation = find_token_gold()
+  while Distance == -1:
+      print("No tokens found!!")
+      turn(5,0.5)
+      Distance, Rotation = find_token_gold()
+```
