@@ -142,3 +142,21 @@ def drive(speed, seconds):
     R.motors[0].m0.power = 0
     R.motors[0].m1.power = 0
 ```
+
+### Drive ###
+This function defines the rotation of the robot, which allows the robot to rotate around itself.When we give this function the right value, the rotation is defined in the specified time.ike the previous function, this function has two parameters (speed, seconds) which means will rotate with the amount of speed and time.
+
+```python
+def turn(speed, seconds):
+    """
+    Function for setting an angular velocity
+
+    Args: speed (int): the speed of the wheels
+          seconds (int): the time interval
+    """
+    R.motors[0].m0.power = speed
+    R.motors[0].m1.power = -speed
+    time.sleep(seconds)
+    R.motors[0].m0.power = 0
+    R.motors[0].m1.power = 0
+```
