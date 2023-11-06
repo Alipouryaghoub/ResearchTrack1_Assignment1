@@ -221,3 +221,40 @@ turn(-10,4)
 drive(20,2) 
 ```
 
+In the next step, we define another (while) and introduce the number of tokens to the robot and write commands like the previous code, but with the difference that if it release the golden token in the right position, then the next golden token Add to that position with this command `Index2 = Index2 + 1`.
+
+```python
+  Index2 = 0
+while Index2 < 5 :
+
+        Distance, Rotation = find_token_gold()
+    
+        while Distance == -1:
+            print("I don't see any more tokens. Still searching")
+            turn(+5, 0.5)
+            Distance, Rotation = find_token_gold()
+            
+        if Distance < d_th:
+            print("Found it!")
+            R.grab()  # If we are close to the token, we grab it.
+            print("Gotcha!")
+            turn(20, 2.5)  # Adjust robot position for the next box placement
+      	    # Move to the reference position
+    	    drive(22, 6)   
+            
+            R.release()  # Release the box
+            # Move away from the reference position
+            drive(-20, 1.5)
+            turn(-10, 4)
+            drive(20, 2)
+            Index2 = Index2 + 1
+        elif -a_th <= Rotation <= a_th:  # If the robot is well aligned with the token, move forward
+            print("Ah, here we are!.")
+            drive(10, 0.8)
+        elif Rotation < -a_th:  # If the robot is not well aligned with the token, move left
+            print("Left a bit...")
+            turn(-2, 0.5)
+        elif Rotation > a_th:
+            print("Right a bit...")
+            turn(+2, 0.5)
+```
