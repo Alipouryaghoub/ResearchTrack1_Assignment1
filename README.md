@@ -116,19 +116,12 @@ for m in markers:
 ### Parameter definition ###
 
 According to the goal of the robot, in this program, two parameters must be defined as thresholds. Parameter a_th is considered as orientation and parameter d_th as distance threshold. The purpose of defining this parameter is for the robot to know when and at what angle it is close to the target so that it can grab it.
-R = Robot()
-""" instance of the class Robot"""
-
-
+```python
 def drive(speed, seconds):
-    """
-    Function for setting a linear velocity
 
-    Args: speed (int): the speed of the wheels
-          seconds (int): the time interval
-    """
-    R.motors[0].m0.power = speed
-    R.motors[0].m1.power = speed
-    time.sleep(seconds)
-    R.motors[0].m0.power = 0
-    R.motors[0].m1.power = 0
+	R.motors[0].m0.power = speed
+	R.motors[0].m1.power = speed
+	time.sleep(seconds)
+	R.motors[0].m0.power = 0
+	R.motors[0].m1.power = 0
+```
