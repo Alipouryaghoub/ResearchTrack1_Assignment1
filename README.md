@@ -145,7 +145,7 @@ def drive(speed, seconds):
 
 ### turn() ###
 
-This function defines the rotation of the robot, which allows the robot to rotate around itself.When we give this function the right value, the rotation is defined in the specified time.ike the previous function, this function has two parameters (speed, seconds) which means will rotate with the amount of speed and time.
+This function defines the rotation of the robot, which allows the robot to rotate around itself.When we give this function the right value, the rotation is defined in the specified time.like the previous function, this function has two parameters (speed, seconds) which means will rotate with the amount of speed and time.
 
 ```python
 def turn(speed, seconds):
