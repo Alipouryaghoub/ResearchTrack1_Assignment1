@@ -167,7 +167,9 @@ def turn(speed, seconds):
 The purpose of this function definition is to actually find the closest golden token. In this program, we presentation the distance with the variable (Distance) and the rotation angle with the variable (Rotation).In this function, we consider the range of the robot's vision to be 100 and define it in the program in such a way that if the distance of the golden token is less than 100, then the robot will find the closest token and if there is no token within 100 distance, Run this program again.
 
 ```python
-  Distance = 100
+ def find_token_gold():
+   
+    Distance = 100
     for a in R.see():
         if a.dist < Distance and a.info.marker_type == MARKER_TOKEN_GOLD:
             Distance = a.dist
