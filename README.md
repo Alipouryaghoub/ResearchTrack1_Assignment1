@@ -9,8 +9,9 @@ This is the second position of the robot relative of the gold tokens in simulato
 
 ![](/sr/robot2.png)
 
+This is the algorithm flowchart of the program.
 
-![](/sr/RT1_flowchart_page-0001.jpg)
+              ![](/sr/RT1_flowchart_page-0001.jpg)
 
 Python Robotics Simulator
 ================================
